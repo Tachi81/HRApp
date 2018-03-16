@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 namespace HRApp.Tests
 {
     [TestFixture]
-  public  class CompanyTests
+    public class CompanyTests
     {
         private Company _company;
         private Employee _employee;
         private string _expectedCompanyName;
 
-            [SetUp]
+        [SetUp]
         public void Init()
         {
             _expectedCompanyName = "15K_DeveloperCompany";
@@ -25,7 +25,7 @@ namespace HRApp.Tests
                 string.Empty,
                 string.Empty,
                 0,
-                0
+                2000
             );
         }
 
@@ -50,9 +50,18 @@ namespace HRApp.Tests
             _company.AddEmployee(_employee);
             var employee = _company.GetEmployeeByName(_employee.FirstName, _employee.LastName);
 
-                Assert.That(_company.GetEmployeeByName(employee.FirstName, employee.LastName),Is.EqualTo(_employee));
+            Assert.That(_company.GetEmployeeByName(employee.FirstName, employee.LastName), Is.EqualTo(_employee));
         }
 
+        [Test]
+        public void Should_IncreaseEmployeeSalary_WhenPercentageIsSpecified()
+        {
+            var percentage = 15;
+            var salaryBeforeIncrease = _employee.Salary;
+            _employee.IncreaseSalary(percentage);
+
+            Assert.That(_employee.Salary, Is.EqualTo(salaryBeforeIncrease*(decimal)(1+percentage/100.0)));
+        }
 
 
     }

@@ -22,5 +22,10 @@ namespace HRApp
             Age = age;
             Salary = salary;
         }
+
+        public void IncreaseSalary(double percentage)
+        {
+            Salary *= (decimal)(1 + percentage / 100);
+        }
     }
 }
