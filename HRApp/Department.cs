@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace HRApp
 {
-    public class Class1
+    public enum Department
     {
+        None,
+        HumanResources,
+        Sales,
+        It,
+        Logistics,
+        Accounting
     }
 }
