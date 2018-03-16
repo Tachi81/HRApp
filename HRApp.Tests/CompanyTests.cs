@@ -38,7 +38,19 @@ namespace HRApp.Tests
         [Test]
         public void Should_AddEmployee_WithDepartment_WhenFielsdAreSpecified()
         {
-            Assert.That(_company.GetAllEmployees().Count, Is.EqualTo(0));
+            Assert.That(_company.GetAllEmployees(Department.HumanResources).Count, Is.EqualTo(0));
+
+            _company.AddEmployee(_employee);
+            Assert.That(_company.GetAllEmployees(Department.HumanResources).Count, Is.EqualTo(1));
+        }
+
+        [Test]
+        public void Should_GetEmployee_WhenFullNameIsSpecified()
+        {
+            _company.AddEmployee(_employee);
+            var employee = _company.GetEmployeeByName(_employee.FirstName, _employee.LastName);
+
+                Assert.That(_company.GetEmployeeByName(employee.FirstName, employee.LastName),Is.EqualTo(_employee));
         }
 
 

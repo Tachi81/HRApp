@@ -24,7 +24,7 @@ namespace HRApp
 
         public void AddEmployee(Employee employee)
         {
-
+            _employees.Add(employee);
         }
 
         public List<Employee> GetAllEmployees()
@@ -32,5 +32,14 @@ namespace HRApp
             return _employees;
         }
 
+        public List<Employee> GetAllEmployees(Department department)
+        {
+            return _employees.Where(e => e.Department == department).ToList();
+        }
+
+        public Employee GetEmployeeByName(string firstName, string lastName)
+        {
+            return _employees.FirstOrDefault(e => e.FirstName == firstName && e.LastName == lastName);
+        }
     }
 }
