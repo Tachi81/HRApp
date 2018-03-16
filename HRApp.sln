@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27428.2005
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRApp", "HRApp\HRApp.csproj", "{F9C073D6-A275-423F-ADB6-CD18C83CB86E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRApp.Tests", "HRApp.Tests\HRApp.Tests.csproj", "{92FCC5C4-B716-43DA-8B30-017CFC6CA39C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F9C073D6-A275-423F-ADB6-CD18C83CB86E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9C073D6-A275-423F-ADB6-CD18C83CB86E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9C073D6-A275-423F-ADB6-CD18C83CB86E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92FCC5C4-B716-43DA-8B30-017CFC6CA39C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92FCC5C4-B716-43DA-8B30-017CFC6CA39C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92FCC5C4-B716-43DA-8B30-017CFC6CA39C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92FCC5C4-B716-43DA-8B30-017CFC6CA39C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

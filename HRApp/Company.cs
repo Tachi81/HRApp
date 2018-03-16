@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HRApp
 {
-    class Company : ICompany
+    public class Company : ICompany
     {
         private readonly string _name;
         private readonly List<Employee> _employees;
@@ -19,7 +19,7 @@ namespace HRApp
 
         public string GetCompanyName()
         {
-            return "";
+            return _name;
         }
 
         public void AddEmployee(Employee employee)
@@ -29,8 +29,7 @@ namespace HRApp
 
         public List<Employee> GetAllEmployees()
         {
-            // TODO add functionality
-            throw new NotImplementedException();
+            return _employees;
         }
 
     }

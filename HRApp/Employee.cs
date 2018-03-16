@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HRApp
 {
-    class Employee
+   public class Employee
     {
         public Department Department { get; set; }
         public string FirstName { get; private set; }

@@ -2,7 +2,7 @@
 
 namespace HRApp
 {
-    interface ICompany
+   public interface ICompany
     {
         void AddEmployee(Employee employee);
         List<Employee> GetAllEmployees();
